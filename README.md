@@ -1,5 +1,6 @@
-# Herramientas
-herramiestas sevas
+# MyFactory
+
+Herramientas y utilidades de Claude Code del curso de Harness Engineering: agentes y skills reutilizables, sacados de los proyectos del curso (el último, storyMaker) para usarlos en cualquier otro.
 
 ## Agentes de Claude Code
 
@@ -19,3 +20,4 @@ Definiciones en `.claude/skills/<nombre>/SKILL.md`. Para usarlas en todos los pr
 | Skill | Qué hace | Cómo invocarla |
 |---|---|---|
 | `estructura-proyecto` | Crea el esqueleto de un proyecto: solo carpetas y ficheros vacíos o con una línea de marcador, a partir del árbol descrito en un doc de arquitectura, en una spec o por el usuario. Lee `AGENTS.md`/`CLAUDE.md` y respeta sus reglas (por ejemplo, spec antes de código). No escribe lógica ni ejecuta generadores. | `/estructura-proyecto`, o pedir "crea la estructura" / "monta las carpetas". |
+| `verificacion` | Construye o revisa el plan de verificación de una spec: qué propiedades importan, con qué método se comprueba cada una, su etiqueta Trust Spec (T/A/I/D/U) y su **punto ciego**. Exige un segundo método cuando el dato lo declara el propio agente evaluado y marca los validadores solitarios. Trae un catálogo mínimo de métodos para proyectos que no tengan uno. | Pedir "haz el plan de verificación de `specs/x.md`" o "revisa `specs/x-verification.md`". |
